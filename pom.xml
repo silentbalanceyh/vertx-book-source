@@ -10,4 +10,51 @@
     </modules>
     <packaging>pom</packaging>
     <name>( Vert.x逐陆记 ) Source Code</name>
+    <properties>
+        <vertx.version>3.5.1</vertx.version>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-infinispan</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-hazelcast</artifactId>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-dependencies</artifactId>
+                <version>${vertx.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- since 2.0 -->
+                <version>3.7.0</version>
+                <configuration>
+                    <!-- use the Java 8 language features -->
+                    <source>${java.version}</source>
+                    <!-- want the compiled classes to be compatible with JVM 1.8 -->
+                    <target>${java.version}</target>
+                    <!-- The -encoding argument for the Java compiler. -->
+                    <encoding>UTF8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
