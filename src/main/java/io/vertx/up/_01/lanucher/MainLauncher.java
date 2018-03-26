@@ -12,6 +12,7 @@ public class MainLauncher {
         final boolean isClustered = false;
         final Launcher launcher = isClustered ? new ClusterLauncher() :
                 new SingleLauncher();
+        
         // 设置Options
         launcher.start(vertx -> {
             // 函数模式发布
@@ -25,6 +26,10 @@ public class MainLauncher {
                     new DeploymentOptions().setIsolationGroup("NEW GROUP")));
             safeJvm(() -> vertx.deployVerticle(MyFirstVerticle::new,
                     new DeploymentOptions().setIsolatedClasses(new ArrayList<>())));
+            safeJvm(() -> vertx.deployVerticle(MyFirstVerticle::new,
+                    new DeploymentOptions().setInstances(10), res -> {
+                        System.out.println(res.result());
+                    }));
         });
     }
 
