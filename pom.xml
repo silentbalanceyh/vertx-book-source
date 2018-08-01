@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
     <name>( Vert.x逐陆记 ) Source Code</name>
     <properties>
-        <vertx.version>3.5.1</vertx.version>
+        <vertx.version>3.5.3</vertx.version>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
