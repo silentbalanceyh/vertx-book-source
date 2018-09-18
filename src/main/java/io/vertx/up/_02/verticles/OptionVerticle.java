@@ -1,4 +1,4 @@
-package io.vertx.up._02.http;
+package io.vertx.up._02.verticles;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.http.HttpServer;
