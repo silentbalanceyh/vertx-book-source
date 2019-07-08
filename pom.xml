@@ -11,25 +11,29 @@
     <packaging>pom</packaging>
     <name>( Vert.x逐陆记 ) Source Code</name>
     <properties>
-        <vertx.version>3.5.3</vertx.version>
+        <vertx.version>3.7.1</vertx.version>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
+            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-infinispan</artifactId>
+            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-hazelcast</artifactId>
+            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-rx-java2</artifactId>
+            <version>${vertx.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
