@@ -1,0 +1,17 @@
+{
+    "code": "Develop",
+    "money": 3200,
+    "report": {
+        "application": 12,
+        "sortware": 21,
+        "web": {
+            "js": "JS",
+            "react": "React",
+            "java": {
+                "jsf": "JSF"
+            }
+        },
+        "testing": 12
+    },
+    "name": "DEV"
+}

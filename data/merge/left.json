@@ -1,0 +1,14 @@
+{
+    "code": "Develop",
+    "money": 3200,
+    "report": {
+        "application": 12,
+        "sortware": 21,
+        "web": {
+            "php": "PHP",
+            "java": {
+                "jsp": "JSP"
+            }
+        }
+    }
+}
