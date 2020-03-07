@@ -11,15 +11,16 @@
     <packaging>pom</packaging>
     <name>( Vert.x逐陆记 ) Source Code</name>
     <properties>
-        <vertx.version>3.7.1</vertx.version>
+        <vertx.version>3.8.5</vertx.version>
         <java.version>1.8</java.version>
+        <zero.version>0.5.1-SNAPSHOT</zero.version>
     </properties>
     <dependencies>
         <!-- Zero Core -->
         <dependency>
             <groupId>cn.vertxup</groupId>
             <artifactId>vertx-co</artifactId>
-            <version>0.5</version>
+            <version>${zero.version}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>

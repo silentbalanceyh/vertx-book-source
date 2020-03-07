@@ -24,3 +24,9 @@
 hs_err_pid*
 .idea
 .vertx
+*.iml
+archive
+target
+.Archive/
+.markeditor/
+configs
