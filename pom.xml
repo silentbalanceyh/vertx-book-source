@@ -13,7 +13,9 @@
     <properties>
         <vertx.version>3.8.5</vertx.version>
         <java.version>1.8</java.version>
+        <hazelcast.version>3.12.4</hazelcast.version>
         <zero.version>0.5.3-SNAPSHOT</zero.version>
+        <rxjava.version>2.2.19</rxjava.version>
     </properties>
     <dependencies>
         <!-- Zero Core -->
@@ -56,7 +58,12 @@
             <dependency>
                 <groupId>io.reactivex.rxjava2</groupId>
                 <artifactId>rxjava</artifactId>
-                <version>2.1.12</version>
+                <version>${rxjava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hazelcast</groupId>
+                <artifactId>hazelcast</artifactId>
+                <version>${hazelcast.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
