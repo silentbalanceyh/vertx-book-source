@@ -53,6 +53,11 @@
             <artifactId>vertx-rx-java2</artifactId>
             <version>${vertx.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-codegen</artifactId>
+            <classifier>processor</classifier>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -82,7 +87,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <!-- since 2.0 -->
-                <version>3.7.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <!-- use the Java 8 language features -->
                     <source>${java.version}</source>
@@ -91,6 +96,19 @@
                     <!-- The -encoding argument for the Java compiler. -->
                     <encoding>UTF8</encoding>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <configuration>
+                            <annotationProcessors>
+                                <annotationProcessor>io.vertx.codegen.CodeGenProcessor</annotationProcessor>
+                            </annotationProcessors>
+                            <compilerArgs>
+                                <arg>-Acodegen.output=${project.basedir}/src/main</arg>
+                            </compilerArgs>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
         <resources>
