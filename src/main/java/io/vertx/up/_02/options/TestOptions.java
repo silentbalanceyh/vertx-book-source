@@ -1,9 +1,7 @@
 package io.vertx.up._02.options;
 
-import io.vertx.codegen.annotations.DataObject;
 import io.vertx.core.json.JsonObject;
 
-@DataObject(generateConverter = true, publicConverter = false)
 public class TestOptions {
     public static final int DEFAULT_AGE = 10;
     public static final String DEFAULT_NAME = "Lang";
