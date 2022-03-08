@@ -19,7 +19,7 @@
     <properties>
         <vertx.version>3.9.6</vertx.version>
         <java.version>1.8</java.version>
-        <hazelcast.version>3.12.4</hazelcast.version>
+        <hazelcast.version>5.1</hazelcast.version>
         <zero.version>0.6.0-SNAPSHOT</zero.version>
         <rxjava.version>2.2.19</rxjava.version>
     </properties>
